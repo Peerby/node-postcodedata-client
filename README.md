@@ -1,5 +1,3 @@
-#node-postcodedata-client
-
 Simple wrapper around [http://www.postcodedata.nl/](postcodedata.nl) API.
 
 ### Installation
@@ -20,7 +18,12 @@ var postcodeDataClient = require('node-postcodedata-client')({
 
 postcodeDataClient.get({
     domain:'go.peerby.com'
-}).get('1016BR', 182, '95.96.52.170', function (err, res) {});
+}).get('1016BR', 182, '96.95.52.170', function (err, res) {
+    if (err) {
+        return console.err(err);
+    }
+    console.log(res);
+});
 
 
 ```

@@ -7,6 +7,7 @@
     "debug": "2.2.0",
     "lodash": "3.10.1",
     "needle": "0.10.0",
+    "util": "0.10.3",
     "validate-ip": "1.0.1"
   },
   "devDependencies": {},
