@@ -1,0 +1,34 @@
+{
+  "name": "node-postcodedata-client",
+  "version": "0.0.1",
+  "description": "Simple wrapper around postcodedata.nl API",
+  "main": "index.js",
+  "dependencies": {
+    "debug": "2.2.0",
+    "lodash": "3.10.1",
+    "needle": "0.10.0",
+    "validate-ip": "1.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Peerby/node-postcodedata-client.git"
+  },
+  "keywords": [
+    "postcodedata",
+    "postcode",
+    "zip",
+    "netherlands",
+    "nederland",
+    "nl"
+  ],
+  "author": "godspeedelbow",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Peerby/node-postcodedata-client/issues"
+  },
+  "homepage": "https://github.com/Peerby/node-postcodedata-client"
+}
