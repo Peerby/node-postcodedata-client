@@ -49,7 +49,7 @@ Client.prototype.get = function get(postcode, streetNumber, userIp, done) {
         if (res.body.status === 'error') {
             return done(new Error(res.body.errormessage));
         }
-        done(res.body.details[0]);
+        done(null, res.body.details[0]);
     });
 };
 
