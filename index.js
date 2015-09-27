@@ -6,13 +6,15 @@ var validateIp = require('validate-ip');
 
 var baseUrl = 'http://api.postcodedata.nl/v1/postcode/';
 var defaultOptions = {
-    type: 'json'
+    type: 'json',
+    timeout: 5 * 1000, //5 seconds
 };
 
 function Client (options) {
     this.options = _.extend({}, defaultOptions, _.pick(options, [
         'domain',
-        'type'
+        'timeout',
+        'type',
     ]));
 }
 
@@ -42,7 +44,10 @@ Client.prototype.get = function get(postcode, streetNumber, userIp, done) {
     if (this.options.domain) {
         url += '&ref='+this.options.domain;
     }
-    needle.get(url, function (err, res) {
+
+    var options = _.pick(this.options, ['timeout']);
+
+    needle.get(url, options, function (err, res) {
         if (err || res.statusCode !== 200) {
             return done(new Error('unexpected error: ' + err));
         }

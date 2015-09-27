@@ -13,6 +13,7 @@ npm isntall node-postcodedata-client
 ```
 var postcodeDataClient = require('node-postcodedata-client')({
     domain: 'yourdomain.yo',
+    timeout: 5000, //time (ms) before we give up
     type: 'json' //default: 'json', can also be set to 'xml'
 });
 
